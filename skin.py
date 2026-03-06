@@ -1,5 +1,6 @@
 import numpy as np
 import streamlit as st
+import scipy
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -251,6 +252,7 @@ fig_small3.update_layout(
 )
 
 st.plotly_chart(fig_small3, use_container_width=True)
+
 
 
 
