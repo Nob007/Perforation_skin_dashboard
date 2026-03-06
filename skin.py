@@ -75,11 +75,13 @@ st.metric("**Perforation skin**", value = f"{Sp:,.4f}")
 
 
 col1, col2 = st.columns(2)
-df1 = col1.data_editor(
+with col1:
+    df1 = st.data_editor(
     pd.DataFrame({"Shot Density":[2,4,6,8]}),
     num_rows="dynamic"
 )
-df2 = col2.data_editor(
+with col2:
+    df2 = st.data_editor(
     pd.DataFrame({"Perforation Length":[2,4,6,8]}),
     num_rows="dynamic"
 )
@@ -252,6 +254,7 @@ fig_small3.update_layout(
 )
 
 st.plotly_chart(fig_small3, use_container_width=True)
+
 
 
 
