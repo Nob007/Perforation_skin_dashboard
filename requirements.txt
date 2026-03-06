@@ -3,4 +3,3 @@ pandas
 numpy
 streamlit
 scipy
-altair==4.2.2
